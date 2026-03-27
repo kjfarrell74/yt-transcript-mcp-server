@@ -1,10 +1,16 @@
 import os
 import re
 from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp.server import TransportSecuritySettings
 from youtube_transcript_api import YouTubeTranscriptApi
 import yt_dlp
 
-mcp = FastMCP("yt-transcript")
+mcp = FastMCP(
+    "yt-transcript",
+    transport_security=TransportSecuritySettings(
+        enable_dns_rebinding_protection=False,
+    ),
+)
 yta = YouTubeTranscriptApi()
 
 
