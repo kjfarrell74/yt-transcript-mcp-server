@@ -1,4 +1,5 @@
 mcp[cli]
 youtube-transcript-api
 yt-dlp
-uvicorn
+uvicorn[standard]
+h11
